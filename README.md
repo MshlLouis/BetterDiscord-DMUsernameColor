@@ -26,7 +26,8 @@ between RGB, HSL and HEX. Once you're done click "Done". Now whenever you go to 
 
 ## Preview
 
-![preview](https://github.com/MshlLouis/BetterDiscord-SetUsernameColor/blob/main/preview.PNG)
+![preview](https://github.com/MshlLouis/BetterDiscord-DMUsernameColor/blob/main/preview.PNG)
+
 
 
 ## Help
