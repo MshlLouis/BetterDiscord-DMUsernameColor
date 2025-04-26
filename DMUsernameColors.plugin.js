@@ -27,39 +27,31 @@ module.exports = class DMUsernameColors {
     applyUsernameColors() {
         if (!this.isInPrivateMessage()) return;
 
-        const usernameSelector = '[class*="username"], [class*="titleWrapper"], [class*="overflow"]';
+        const usernameSelector = '[class*="username"], [class*="titleWrapper"], [class*="overflow"], [class*="defaultColor"]';
         const elements = document.querySelectorAll(usernameSelector);
 
         elements.forEach(el => {
-			const innerH1 = el.querySelector('h1');
-            const innerH2 = el.querySelector('h2');
-            const target = innerH1 || innerH2 || el;
-
-            let username = target.textContent.trim();
-            const tag = target.querySelector('[class*="chipletContainerInner"]');
+            let username = el.textContent.trim();
+            const tag = el.querySelector('[class*="chipletContainerInner"]');
             if (tag) username = username.replace(tag.textContent.trim(), '').trim();
 
             this.settings.usernames.forEach(u => {
-                if (username === u.name) target.style.color = u.color;
+                if (username === u.name) el.style.color = u.color;
             });
         });
     }
 
     resetUsernameColors() {
-        const usernameSelector = '[class*="username"], [class*="titleWrapper"], [class*="overflow"]';
+        const usernameSelector = '[class*="username"], [class*="titleWrapper"], [class*="overflow"], [class*="defaultColor"]';
         const elements = document.querySelectorAll(usernameSelector);
 
         elements.forEach(el => {
-			const innerH1 = el.querySelector('h1');
-            const innerH2 = el.querySelector('h2');
-            const target = innerH1 || innerH2 || el;
-
-            let username = target.textContent.trim();
-            const tag = target.querySelector('[class*="chipletContainerInner"]');
+            let username = el.textContent.trim();
+            const tag = el.querySelector('[class*="chipletContainerInner"]');
             if (tag) username = username.replace(tag.textContent.trim(), '').trim();
 
             this.settings.usernames.forEach(u => {
-                if (username === u.name) target.style.color = '';
+                if (username === u.name) el.style.color = '';
             });
         });
     }
