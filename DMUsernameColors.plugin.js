@@ -3,6 +3,7 @@
  * @author Mshl_Louis
  * @version 1.4.1.0
  * @description A plugin that allows users to change the color of usernames in private messages including groups
+ * @source https://github.com/MshlLouis/BetterDiscord-DMUsernameColor/blob/main/DMUsernameColors.plugin.js
  */
 
 module.exports = class DMUsernameColors {
